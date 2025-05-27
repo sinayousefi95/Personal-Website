@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion'
 import { WrenchScrewdriverIcon, BeakerIcon, ChartBarIcon } from '@heroicons/react/24/outline'
 import PhotoGallery from './components/PhotoGallery'
