@@ -170,7 +170,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
           <p className="text-lg mb-8">
-            I'm always interested in new opportunities and collaborations.
+            I&apos;m always interested in new opportunities and collaborations.
           </p>
           <div className="flex justify-center gap-4">
             <a 
