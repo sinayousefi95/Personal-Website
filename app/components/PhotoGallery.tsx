@@ -34,9 +34,10 @@ export default function PhotoGallery() {
     files.forEach(file => {
       if (file.type.startsWith('image/')) {
         const reader = new FileReader();
-        reader.onload = (e) => {
-          if (e.target?.result) {
-            setImages(prev => [...prev, e.target.result as string]);
+        reader.onload = (e: ProgressEvent<FileReader>) => {
+          const result = e.target?.result;
+          if (result && typeof result === 'string') {
+            setImages(prev => [...prev, result]);
           }
         };
         reader.readAsDataURL(file);
@@ -95,6 +96,7 @@ export default function PhotoGallery() {
                 alt={`Uploaded image ${index + 1}`}
                 fill
                 className="object-cover"
+                unoptimized
               />
             </div>
           ))}
